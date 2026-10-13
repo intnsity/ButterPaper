@@ -1,0 +1,257 @@
+/* Butter Paper v2 · 13 October 2026 · three official modes: Butter Paper / Southwest Night / Nordic Night */
+/* Southwest Night: juniper graphite and photo-derived desert bloom, asters, sage and sky. Nordic Night: neutral stone, snow, ember-orange actions and cabin red; no navy surfaces. */
+
+:root, html[data-theme="paper"] {
+  --bp-bg: #FFF7E0;
+  --bp-side: #FAF3D9;
+  --bp-panel: #FFFBEB;
+  --bp-raised: #FFFFFF;
+  --bp-selected: #FFF4C9;
+  --bp-border: #D7CEB5;
+  --bp-text: #2B2417;
+  --bp-secondary: #6B6250;
+  --bp-muted: #796F5E;
+  --bp-accent: #1E40AF;
+  --bp-accent-hover: #1B3691;
+  --bp-accent-tint: #E4EBFA;
+  --bp-accent-tint-ink: #172E7C;
+  --bp-success: #047857;
+  --bp-warning: #C2410C;
+  --bp-danger: #BE123C;
+  --bp-chart: #7451A4;
+  --bp-on-accent: #FFFFFF;
+  --bp-topology: #F6EED8;
+  --bp-rack: #63778B;
+  --t-bg: #FFF7E0;
+  --t-side: #FAF3D9;
+  --t-panel: #FFFBEB;
+  --t-raised: #FFFFFF;
+  --t-selected: #FFF4C9;
+  --t-border: #D7CEB5;
+  --t-text: #2B2417;
+  --t-secondary: #6B6250;
+  --t-muted: #796F5E;
+  --t-accent: #1E40AF;
+  --t-accent-hover: #1B3691;
+  --t-soft: #E4EBFA;
+  --t-soft-text: #172E7C;
+  --t-success: #047857;
+  --t-warning: #C2410C;
+  --t-danger: #BE123C;
+  --t-purple: #7451A4;
+  --t-topo: #F6EED8;
+  --t-rack: #63778B;
+  --t-rack-top: #90A0B0;
+  --t-rack-side: #46586B;
+  --t-ink-on-accent: #FFFFFF;
+  --t-surface-inset: #FAF3D9;
+  --t-grid: #2B241710;
+  --t-backdrop: #2B241766;
+  color-scheme: light;
+}
+
+html[data-theme="desert"] {
+  --bp-bg: #252520;
+  --bp-side: #1E201C;
+  --bp-panel: #322F2A;
+  --bp-raised: #403A33;
+  --bp-selected: #4A3C33;
+  --bp-border: #65584D;
+  --bp-text: #F5EFE4;
+  --bp-secondary: #D7CCBB;
+  --bp-muted: #BBAD9B;
+  --bp-accent: #F0A27A;
+  --bp-accent-hover: #FFB78D;
+  --bp-accent-tint: #4D342C;
+  --bp-accent-tint-ink: #FFD6BA;
+  --bp-success: #ACD09F;
+  --bp-warning: #FFD447;
+  --bp-danger: #FF878E;
+  --bp-chart: #B9A5ED;
+  --bp-on-accent: #2C1D15;
+  --bp-topology: #292A24;
+  --bp-rack: #766B59;
+  --t-bg: #252520;
+  --t-side: #1E201C;
+  --t-panel: #322F2A;
+  --t-raised: #403A33;
+  --t-selected: #4A3C33;
+  --t-border: #65584D;
+  --t-text: #F5EFE4;
+  --t-secondary: #D7CCBB;
+  --t-muted: #BBAD9B;
+  --t-accent: #F0A27A;
+  --t-accent-hover: #FFB78D;
+  --t-soft: #4D342C;
+  --t-soft-text: #FFD6BA;
+  --t-success: #ACD09F;
+  --t-warning: #FFD447;
+  --t-danger: #FF878E;
+  --t-purple: #B9A5ED;
+  --t-topo: #292A24;
+  --t-rack: #766B59;
+  --t-rack-top: #AF9A80;
+  --t-rack-side: #51493D;
+  --t-ink-on-accent: #2C1D15;
+  --t-surface-inset: #1E201C;
+  --t-grid: #F2D9BA0B;
+  --t-backdrop: #11110FE3;
+  /* Photo-derived field notes: sampled from the supplied Southwest photographs. */
+  --bp-bloom-orange: #F27B43;       /* wild mallow blossom */
+  --bp-aster-violet: #957EC8;       /* wild asters */
+  --bp-desert-sky: #7CA0C4;        /* hot air balloon sky */
+  --bp-golden-bloom: #C9B026;      /* small yellow wildflowers */
+  --bp-juniper-sage: #91AF75;      /* native foliage */
+  --bp-birdhouse-rose: #CF898F;    /* weathered red birdhouse */
+  /* UI harmonizations: brighter, more legible under dark surfaces. */
+  --bp-ui-violet: #B9A5ED;
+  --bp-ui-sky: #88B5DA;
+  --bp-ui-bloom: #F0A27A;
+  --bp-ui-gold: #FFD447;
+  --bp-ui-sage: #ACD09F;
+  --t-sky: #88B5DA;
+  color-scheme: dark;
+  /* Solid alert badges and matching readable text colors are separate roles. */
+  --bp-warning-strong: #FFD447;
+  --bp-danger-strong: #FF5364;
+  --bp-on-warning: #2A2009;
+  --bp-on-danger: #260E15;
+  --t-warning-strong: #FFD447;
+  --t-danger-strong: #FF5364;
+}
+
+html[data-theme="nordic"] {
+  /* Soft, almost-neutral charcoal. No navy, teal or cobalt background layers. */
+  --bp-bg: #252426;
+  --bp-side: #1F1E20;
+  --bp-panel: #2F2D30;
+  --bp-raised: #39363A;
+  --bp-selected: #443E40;
+  --bp-border: #4F4A4E;
+  --bp-text: #F1EDE8;
+  --bp-secondary: #CFC7C3;
+  --bp-muted: #B2A9A5;
+  --bp-accent: #FF914D;
+  --bp-accent-hover: #FFAB73;
+  --bp-accent-tint: #4B3026;
+  --bp-accent-tint-ink: #FFC49D;
+  --bp-success: #AEC5AD;
+  --bp-warning: #FFD447;
+  --bp-danger: #FF878E;
+  --bp-chart: #C4BACA;
+  --bp-on-accent: #241810;
+  --bp-topology: #28272A;
+  --bp-rack: #70686C;
+  --t-bg: #252426;
+  --t-side: #1F1E20;
+  --t-panel: #2F2D30;
+  --t-raised: #39363A;
+  --t-selected: #443E40;
+  --t-border: #4F4A4E;
+  --t-text: #F1EDE8;
+  --t-secondary: #CFC7C3;
+  --t-muted: #B2A9A5;
+  --t-accent: #FF914D;
+  --t-accent-hover: #FFAB73;
+  --t-soft: #4B3026;
+  --t-soft-text: #FFC49D;
+  --t-success: #AEC5AD;
+  --t-warning: #FFD447;
+  --t-danger: #FF878E;
+  --t-purple: #C4BACA;
+  --t-topo: #28272A;
+  --t-rack: #70686C;
+  --t-rack-top: #A4999C;
+  --t-rack-side: #504B50;
+  --t-ink-on-accent: #241810;
+  --t-surface-inset: #1F1E20;
+  --t-grid: #F1EDE80A;
+  --t-backdrop: #171619E8;
+  /* Exact RGB samples from the supplied photographs (not UI text colors). */
+  --bp-source-window: #CB893F;
+  --bp-source-cabin: #811417;
+  --bp-source-mist: #C9D5D5;
+  --bp-source-stone: #43423E;
+  --bp-source-snow-shadow: #847177;
+  --bp-source-harbor: #A8561A;
+  --bp-source-porcelain: #F5F2ED;
+  --bp-source-steel: #373739;
+  --bp-source-sky: #00376A; /* Reference only. Never assigned to a UI surface. */
+  /* Source companions and semantic roles are tuned separately for dark UI.
+     Orange actions are intentionally more saturated; source samples stay unchanged. */
+  --bp-control-border: #92888C;
+  --bp-cabin-red: #D79B94;
+  --bp-frost: #C0CCCD;
+  --bp-snow-shadow: #C4BACA;
+  --bp-success-tint: #2D382F;
+  --bp-warning-tint: #41351C;
+  --bp-danger-tint: #44232B;
+  --bp-info: #C0CCCD;
+  --bp-info-tint: #32383A;
+  --t-sky: #C0CCCD;
+  --t-cabin-red: #D79B94;
+  color-scheme: dark;
+  /* Solid alert badges and matching readable text colors are separate roles. */
+  --bp-warning-strong: #FFD447;
+  --bp-danger-strong: #FF5364;
+  --bp-on-warning: #2A2009;
+  --bp-on-danger: #260E15;
+  --t-warning-strong: #FFD447;
+  --t-danger-strong: #FF5364;
+}
+
+/* Layout primitives; intentionally restrained. Adopt any classes you need. */
+.bp-app {background:var(--bp-bg);color:var(--bp-text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;}
+.bp-sidebar {background:var(--bp-side);border-right:1px solid var(--bp-border);}
+.bp-panel {background:var(--bp-panel);border:1px solid var(--bp-border);border-radius:10px;}
+.bp-input {background:var(--bp-raised);color:var(--bp-text);border:1px solid var(--bp-border);border-radius:7px;padding:9px 11px;}
+.bp-btn {background:var(--bp-accent);color:var(--bp-on-accent);border:1px solid var(--bp-accent);border-radius:7px;padding:9px 14px;font:inherit;font-weight:650;cursor:pointer;}
+.bp-btn:hover {background:var(--bp-accent-hover);}
+.bp-btn-secondary {background:var(--bp-raised);border:1px solid var(--bp-border);border-radius:7px;padding:9px 14px;color:var(--bp-text);font:inherit;cursor:pointer;}
+.bp-btn-secondary:hover {background:var(--bp-selected);}
+.bp-nav-active {background:var(--bp-panel);border:1px solid var(--bp-border);color:var(--bp-accent);border-radius:7px;}
+.bp-table {width:100%;border-collapse:collapse;font-size:13px;}
+.bp-table th {text-align:left;font-size:11px;letter-spacing:.07em;text-transform:uppercase;background:var(--bp-side);color:var(--bp-muted);}
+.bp-table td,.bp-table th {padding:11px 14px;border-bottom:1px solid var(--bp-border);}
+.bp-table tbody tr:hover {background:var(--bp-selected);}
+.bp-link {color:var(--bp-accent);text-decoration:underline;text-underline-offset:3px;}
+.bp-status-ok {color:var(--bp-success);}.bp-status-warn {color:var(--bp-warning);}.bp-status-critical {color:var(--bp-danger);}
+.bp-btn:focus-visible,.bp-btn-secondary:focus-visible,.bp-input:focus-visible,.bp-link:focus-visible {outline:2px solid var(--bp-accent);outline-offset:3px;}
+@media (prefers-reduced-motion:reduce){.bp-app *{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;}}
+
+/* Consistent named roles for optional controls and semantic tints. */
+:root, html[data-theme="paper"] {
+  --bp-control-border: #897F6B;
+  --bp-success-tint: #DCF2E7;
+  --bp-warning-tint: #FCE9DE;
+  --bp-danger-tint: #FCE5EA;
+  --bp-info: #1E40AF;
+  --bp-info-tint: #E4EBFA;
+}
+html[data-theme="desert"] {
+  --bp-control-border: #A49280;
+  --bp-success-tint: #2E392B;
+  --bp-warning-tint: #41351C;
+  --bp-danger-tint: #44232B;
+  --bp-info: #88B5DA;
+  --bp-info-tint: #2C3941;
+}
+.bp-input {border-color:var(--bp-control-border,var(--bp-border));}
+.bp-btn:disabled,.bp-btn-secondary:disabled {opacity:.55;cursor:not-allowed;}
+.bp-status-ok,.bp-status-warn,.bp-status-critical {font-weight:600;}
+/* Use status words/icons as well as color; raw photo samples are decorative only.
+   Dark-theme warning: caution yellow. Dark-theme error: signal red.
+   --bp-danger is small-label ink; --bp-danger-strong is the solid badge fill.
+   --bp-on-danger is the dark ink for that fill. Do not use white text on the red. */
+
+/* Optional high-emphasis badges. Existing text-only status helpers are unchanged. */
+.bp-badge {display:inline-flex;align-items:center;gap:5px;padding:3px 7px;
+  border:1px solid transparent;border-radius:4px;font-size:12px;line-height:1.45;font-weight:650;}
+.bp-badge-warning {background:var(--bp-warning-tint);color:var(--bp-warning);}
+.bp-badge-error {background:var(--bp-danger-tint);color:var(--bp-danger);}
+:is(html[data-theme="desert"],html[data-theme="nordic"]) .bp-badge-warning {
+  background:var(--bp-warning-strong);color:var(--bp-on-warning);border-color:var(--bp-warning-strong);
+}
+:is(html[data-theme="desert"],html[data-theme="nordic"]) .bp-badge-error {
+  background:var(--bp-danger-strong);color:var(--bp-on-danger);border-color:var(--bp-danger-strong);
+}
